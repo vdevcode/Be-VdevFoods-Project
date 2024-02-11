@@ -66,16 +66,17 @@ const menuRoutes = require("./api/routes/MenuRoutes");
 const cartRoutes = require("./api/routes/cartRoutes");
 const userRouter = require("./api/routes/userRouter");
 const paymentRoutes = require("./api/routes/paymentRoutes");
-const adminStats = require("./api/routes/adminStats")
-const orderStats = require("./api/routes/orderStats")
- 
+const adminStats = require("./api/routes/adminStats");
+const orderStats = require("./api/routes/orderStats");
+const blogRoutes = require("./api/routes/blogRoutes");
 
 app.use("/menu", menuRoutes);
 app.use("/cart", cartRoutes);
 app.use("/users", userRouter);
 app.use("/payments", paymentRoutes);
-app.use("/adminstats", adminStats)
-app.use("/orderstats", orderStats)
+app.use("/adminstats", adminStats);
+app.use("/orderstats", orderStats);
+app.use("/blog", blogRoutes);
 
 app.get("/", async (req, res) => {
   res.send("hello worlds");
